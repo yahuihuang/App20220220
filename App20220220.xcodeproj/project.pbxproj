@@ -13,6 +13,7 @@
 		659A8F0427B9031500B20B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659A8F0227B9031500B20B9E /* Main.storyboard */; };
 		659A8F0627B9031900B20B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659A8F0527B9031900B20B9E /* Assets.xcassets */; };
 		659A8F0927B9031900B20B9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659A8F0727B9031900B20B9E /* LaunchScreen.storyboard */; };
+		659A8F1127B904C500B20B9E /* stock-market.png in Resources */ = {isa = PBXBuildFile; fileRef = 659A8F1027B904C500B20B9E /* stock-market.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		659A8F0527B9031900B20B9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		659A8F0827B9031900B20B9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		659A8F0A27B9031900B20B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		659A8F1027B904C500B20B9E /* stock-market.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stock-market.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				659A8F0227B9031500B20B9E /* Main.storyboard */,
 				659A8F0527B9031900B20B9E /* Assets.xcassets */,
 				659A8F0727B9031900B20B9E /* LaunchScreen.storyboard */,
+				659A8F1027B904C500B20B9E /* stock-market.png */,
 				659A8F0A27B9031900B20B9E /* Info.plist */,
 			);
 			path = App20220220;
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659A8F1127B904C500B20B9E /* stock-market.png in Resources */,
 				659A8F0927B9031900B20B9E /* LaunchScreen.storyboard in Resources */,
 				659A8F0627B9031900B20B9E /* Assets.xcassets in Resources */,
 				659A8F0427B9031500B20B9E /* Main.storyboard in Resources */,
