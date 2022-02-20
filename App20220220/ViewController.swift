@@ -66,6 +66,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alertVC.addAction(UIAlertAction(title: "Edit", style: .default, handler: { action in
             print("Edit")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC = storyboard.instantiateViewController(withIdentifier: "myEditVC") as! MyEditViewController
+            self.present(nextVC, animated: true, completion: nil)
         }))
         
         self.present(alertVC, animated: true, completion: nil)

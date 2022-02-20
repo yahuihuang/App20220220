@@ -16,6 +16,7 @@
 		659A8F1127B904C500B20B9E /* stock-market.png in Resources */ = {isa = PBXBuildFile; fileRef = 659A8F1027B904C500B20B9E /* stock-market.png */; };
 		65EC9B7327C1E4C300882C19 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC9B7227C1E4C300882C19 /* MyCollectionViewCell.swift */; };
 		65EC9B7527C207E000882C19 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC9B7427C207E000882C19 /* MyViewController.swift */; };
+		65EC9B7927C2159F00882C19 /* MyEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC9B7827C2159F00882C19 /* MyEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		659A8F1027B904C500B20B9E /* stock-market.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stock-market.png"; sourceTree = "<group>"; };
 		65EC9B7227C1E4C300882C19 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		65EC9B7427C207E000882C19 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		65EC9B7827C2159F00882C19 /* MyEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				659A8F0A27B9031900B20B9E /* Info.plist */,
 				65EC9B7227C1E4C300882C19 /* MyCollectionViewCell.swift */,
 				65EC9B7427C207E000882C19 /* MyViewController.swift */,
+				65EC9B7827C2159F00882C19 /* MyEditViewController.swift */,
 			);
 			path = App20220220;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				659A8EFD27B9031500B20B9E /* AppDelegate.swift in Sources */,
 				65EC9B7327C1E4C300882C19 /* MyCollectionViewCell.swift in Sources */,
 				65EC9B7527C207E000882C19 /* MyViewController.swift in Sources */,
+				65EC9B7927C2159F00882C19 /* MyEditViewController.swift in Sources */,
 				659A8EFF27B9031500B20B9E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
