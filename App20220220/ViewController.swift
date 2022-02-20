@@ -24,12 +24,16 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         
         theCollectionView.dataSource = self
         
-        let fullScreenSize = UIScreen.main.bounds.size
+        setLayout(numberOfLine: 3.0)
+    }
+    
+    func setLayout(numberOfLine:CGFloat) {
+        let screenSize = UIScreen.main.bounds.size
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        layout.minimumLineSpacing = 10
-        layout.itemSize = CGSize(width: (fullScreenSize.width / 3 - 20.0), height: fullScreenSize.width / 3 - 20.0)
-        theCollectionView.setCollectionViewLayout(layout, animated: false)
+        layout.minimumLineSpacing = 5
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        layout.itemSize = CGSize(width: screenSize.width / numberOfLine - 10, height: screenSize.width / numberOfLine - 10)
+        theCollectionView.setCollectionViewLayout(layout, animated: true)
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,6 +51,21 @@ class ViewController: UIViewController, UICollectionViewDataSource {
 //        cell.bringSubviewToFront(imageView)
         
         return cell
+    }
+    
+    @IBAction func segmentAction(_ sender: UISegmentedControl) {
+        print(sender.selectedSegmentIndex)
+        
+        switch sender.selectedSegmentIndex{
+        case 0:
+            setLayout(numberOfLine: 3)
+        case 1:
+            setLayout(numberOfLine: 4)
+        case 2:
+            setLayout(numberOfLine: 5)
+        default:
+            break
+        }
     }
     
 }
