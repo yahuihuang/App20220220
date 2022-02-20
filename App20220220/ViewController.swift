@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource {
 
     @IBOutlet weak var theCollectionView: UICollectionView!
     var images:[UIImage?] = []
@@ -23,7 +23,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                   UIImage(named: "image6")]
         
         theCollectionView.dataSource = self
-        theCollectionView.delegate = self
+        
+        let fullScreenSize = UIScreen.main.bounds.size
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        layout.minimumLineSpacing = 10
+        layout.itemSize = CGSize(width: (fullScreenSize.width / 3 - 20.0), height: fullScreenSize.width / 3 - 20.0)
+        theCollectionView.setCollectionViewLayout(layout, animated: false)
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -32,6 +38,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! MyCollectionViewCell
+        cell.backgroundColor = UIColor.lightGray
         cell.theImageView.image = images[indexPath.row]
         
 //        let imageView = UIImageView(image: images[indexPath.row])
