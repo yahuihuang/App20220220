@@ -18,5 +18,8 @@ class MyViewController: UIViewController {
         myImage.image = tempImage
     }
     
-
+    @IBAction func editAction(_ sender: UIButton) {
+        print("editAction UIButton")
+    }
+    
 }

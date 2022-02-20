@@ -146,19 +146,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMd-om-Gi8">
-                                <rect key="frame" x="174" y="433" width="67" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMd-om-Gi8">
+                                <rect key="frame" x="100" y="423" width="100" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.91940291090000004" blue="0.1069808545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="32C-MB-oxh"/>
+                                    <constraint firstAttribute="height" constant="50" id="f6X-qW-vKe"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="editAction:" destination="Mbd-MT-Hxd" eventType="touchUpInside" id="aXw-F6-wXM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qd7-hc-c3S"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="Qd7-hc-c3S" firstAttribute="trailing" secondItem="hMd-om-Gi8" secondAttribute="trailing" constant="100" id="Ctc-tc-aB3"/>
+                            <constraint firstItem="hMd-om-Gi8" firstAttribute="centerX" secondItem="qq9-X6-nnM" secondAttribute="centerX" id="VJd-Rl-WnO"/>
+                            <constraint firstItem="hMd-om-Gi8" firstAttribute="leading" secondItem="Qd7-hc-c3S" secondAttribute="leading" constant="100" id="tTx-ib-E91"/>
+                            <constraint firstItem="hMd-om-Gi8" firstAttribute="centerY" secondItem="qq9-X6-nnM" secondAttribute="centerY" id="wcx-4d-rMT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ui6-nO-Pli" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Mbd-MT-Hxd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1428.985507246377" y="-633.48214285714278"/>
         </scene>
