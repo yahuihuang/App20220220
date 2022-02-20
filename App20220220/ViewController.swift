@@ -56,7 +56,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedImage = indexPath.row
         print("indexPath=\(indexPath)")
-        self.performSegue(withIdentifier: "goImage", sender: nil)
+        
+        let alertVC = UIAlertController(title: "Action", message: "Question", preferredStyle: .alert)
+        let viewAction = UIAlertAction(title: "View", style: .default) { action in
+            self.performSegue(withIdentifier: "goImage", sender: nil)
+        }
+        alertVC.addAction(viewAction)
+        
+        alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
