@@ -7,23 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    
     @IBOutlet weak var theCollectionView: UICollectionView!
     var images:[UIImage?] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        images = [UIImage(named: "AppIcon-1"),
-                  UIImage(named: "AppIcon-2"),
-                  UIImage(named: "AppIcon-3"),
-                  UIImage(named: "AppIcon-4"),
-                  UIImage(named: "AppIcon-5"),
-                  UIImage(named: "AppIcon-6")]
+        images = [UIImage(named: "image1"),
+                  UIImage(named: "image2"),
+                  UIImage(named: "image3"),
+                  UIImage(named: "image4"),
+                  UIImage(named: "image5"),
+                  UIImage(named: "image6")]
         
         theCollectionView.dataSource = self
+        theCollectionView.delegate = self
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -31,8 +31,14 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath)
-        cell.backgroundColor = UIColor.red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! MyCollectionViewCell
+        cell.theImageView.image = images[indexPath.row]
+        
+//        let imageView = UIImageView(image: images[indexPath.row])
+//        imageView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+//        cell.addSubview(imageView)
+//        cell.bringSubviewToFront(imageView)
+        
         return cell
     }
     

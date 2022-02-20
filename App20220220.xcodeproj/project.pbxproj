@@ -14,6 +14,7 @@
 		659A8F0627B9031900B20B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659A8F0527B9031900B20B9E /* Assets.xcassets */; };
 		659A8F0927B9031900B20B9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659A8F0727B9031900B20B9E /* LaunchScreen.storyboard */; };
 		659A8F1127B904C500B20B9E /* stock-market.png in Resources */ = {isa = PBXBuildFile; fileRef = 659A8F1027B904C500B20B9E /* stock-market.png */; };
+		65EC9B7327C1E4C300882C19 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC9B7227C1E4C300882C19 /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		659A8F0827B9031900B20B9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		659A8F0A27B9031900B20B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		659A8F1027B904C500B20B9E /* stock-market.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stock-market.png"; sourceTree = "<group>"; };
+		65EC9B7227C1E4C300882C19 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				659A8F0727B9031900B20B9E /* LaunchScreen.storyboard */,
 				659A8F1027B904C500B20B9E /* stock-market.png */,
 				659A8F0A27B9031900B20B9E /* Info.plist */,
+				65EC9B7227C1E4C300882C19 /* MyCollectionViewCell.swift */,
 			);
 			path = App20220220;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				659A8F0127B9031500B20B9E /* ViewController.swift in Sources */,
 				659A8EFD27B9031500B20B9E /* AppDelegate.swift in Sources */,
+				65EC9B7327C1E4C300882C19 /* MyCollectionViewCell.swift in Sources */,
 				659A8EFF27B9031500B20B9E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
