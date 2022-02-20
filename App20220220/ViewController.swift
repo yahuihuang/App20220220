@@ -68,6 +68,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             print("Edit")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let nextVC = storyboard.instantiateViewController(withIdentifier: "myEditVC") as! MyEditViewController
+//            nextVC.modalPresentationStyle = .fullScreen
             self.present(nextVC, animated: true, completion: nil)
         }))
         
