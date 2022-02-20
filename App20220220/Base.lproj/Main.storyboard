@@ -52,15 +52,15 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="O5F-51-ZL5">
+                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="O5F-51-ZL5">
                                 <rect key="frame" x="0.0" y="44" width="414" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="CfM-CU-Tpq"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="3"/>
-                                    <segment title="4"/>
-                                    <segment title="5"/>
+                                    <segment title="Three"/>
+                                    <segment title="Four"/>
+                                    <segment title="Five"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="vUV-gI-Rnf"/>
@@ -80,6 +80,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mySegment" destination="O5F-51-ZL5" id="57m-PE-dke"/>
                         <outlet property="theCollectionView" destination="k0l-tU-Vj3" id="qmR-ru-K3k"/>
                     </connections>
                 </viewController>
