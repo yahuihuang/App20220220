@@ -13,12 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let path = Bundle.main.path(forResource: "stock-market", ofType: "png") {
-            print(path)
-            theImage.image = UIImage(contentsOfFile: path)
-        }
+//        if let path = Bundle.main.path(forResource: "stock-market", ofType: "png") {
+//            print(path)
+//            theImage.image = UIImage(contentsOfFile: path)
+//        }
+//    }
+        theImage.image = UIImage(named: "stock-market")
+        view.backgroundColor = UIColor(named: "myred")
     }
-
 
 }
 
