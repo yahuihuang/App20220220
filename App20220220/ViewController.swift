@@ -57,13 +57,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         selectedImage = indexPath.row
         print("indexPath=\(indexPath)")
         
-        let alertVC = UIAlertController(title: "Action", message: "Question", preferredStyle: .alert)
+        let alertVC = UIAlertController(title: "Action", message: "Question", preferredStyle: .actionSheet)
         let viewAction = UIAlertAction(title: "View", style: .default) { action in
             self.performSegue(withIdentifier: "goImage", sender: nil)
         }
         alertVC.addAction(viewAction)
         
         alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alertVC.addAction(UIAlertAction(title: "Edit", style: .default, handler: { action in
+            print("Edit")
+        }))
+        
         self.present(alertVC, animated: true, completion: nil)
     }
     
