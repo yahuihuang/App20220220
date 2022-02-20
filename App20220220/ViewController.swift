@@ -10,8 +10,9 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var theCollectionView: UICollectionView!
-    var images:[UIImage?] = []
     @IBOutlet weak var mySegment: UISegmentedControl!
+    var images:[UIImage?] = []
+    var selectedImage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +32,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         setLayout(numberOfLine: 3.0)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "goImage":
+            if let nextVC = segue.destination as? MyViewController {
+                nextVC.tempImage = images[selectedImage]
+            }
+        default:
+            break
+        }
+    }
+    
     func setLayout(numberOfLine:CGFloat) {
         let screenSize = UIScreen.main.bounds.size
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 2
+        layout.minimumLineSpacing = 5
         layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         layout.itemSize = CGSize(width: screenSize.width / numberOfLine - 10, height: screenSize.width / numberOfLine - 10)
         theCollectionView.setCollectionViewLayout(layout, animated: true)
@@ -42,7 +54,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     //MARK: Collection View Delegate & DataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedImage = indexPath.row
         print("indexPath=\(indexPath)")
+        self.performSegue(withIdentifier: "goImage", sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
