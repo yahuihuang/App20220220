@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var theCollectionView: UICollectionView!
     var images:[UIImage?] = []
@@ -26,6 +26,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
                   UIImage(named: "image6")]
         
         theCollectionView.dataSource = self
+        theCollectionView.delegate = self
         
         setLayout(numberOfLine: 3.0)
     }
@@ -33,12 +34,17 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     func setLayout(numberOfLine:CGFloat) {
         let screenSize = UIScreen.main.bounds.size
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 5
+        layout.minimumLineSpacing = 2
         layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         layout.itemSize = CGSize(width: screenSize.width / numberOfLine - 10, height: screenSize.width / numberOfLine - 10)
         theCollectionView.setCollectionViewLayout(layout, animated: true)
     }
 
+    //MARK: Collection View Delegate & DataSource
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("indexPath=\(indexPath)")
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
